@@ -1,0 +1,206 @@
+EESchema Schematic File Version 4
+LIBS:How to make PCB-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Timer:LM555 U1
+U 1 1 5FC644BB
+P 2950 2950
+F 0 "U1" H 2850 3400 50  0000 C CNN
+F 1 "LM555" H 3100 3350 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 2950 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 2950 2950 50  0001 C CNN
+	1    2950 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5FC6467B
+P 3750 2300
+F 0 "R2" H 3818 2346 50  0000 L CNN
+F 1 "1k" H 3818 2255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3790 2290 50  0001 C CNN
+F 3 "~" H 3750 2300 50  0001 C CNN
+	1    3750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 5FC649ED
+P 4100 3150
+F 0 "R1" V 3895 3150 50  0000 C CNN
+F 1 "470k" V 3986 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4140 3140 50  0001 C CNN
+F 3 "~" H 4100 3150 50  0001 C CNN
+	1    4100 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 5FC64A13
+P 4050 2750
+F 0 "R3" V 3845 2750 50  0000 C CNN
+F 1 "1k" V 3936 2750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4090 2740 50  0001 C CNN
+F 3 "~" H 4050 2750 50  0001 C CNN
+	1    4050 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5FC64A75
+P 4700 2900
+F 0 "D1" V 4738 2783 50  0000 R CNN
+F 1 "LED" V 4647 2783 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 4700 2900 50  0001 C CNN
+F 3 "~" H 4700 2900 50  0001 C CNN
+	1    4700 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FC64B4E
+P 2250 3650
+F 0 "C1" H 2365 3696 50  0000 L CNN
+F 1 "1uF" H 2365 3605 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 2288 3500 50  0001 C CNN
+F 3 "~" H 2250 3650 50  0001 C CNN
+	1    2250 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2750 3900 2750
+Wire Wire Line
+	3450 3150 3650 3150
+Text GLabel 4250 3150 2    50   Input ~ 0
+1
+Text GLabel 3450 2950 2    50   Input ~ 0
+1
+Text GLabel 3750 2450 3    50   Input ~ 0
+1
+Wire Wire Line
+	2450 2750 2250 2750
+Wire Wire Line
+	2450 3150 2350 3150
+Wire Wire Line
+	2350 3150 2350 2550
+Wire Wire Line
+	2350 2550 2950 2550
+Wire Wire Line
+	3650 3150 3650 3450
+Connection ~ 3650 3150
+Wire Wire Line
+	3650 3150 3950 3150
+Wire Wire Line
+	4200 2750 4700 2750
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5FC65C32
+P 1550 2050
+F 0 "J1" H 1470 1817 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 1630 1951 50  0001 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1550 2050 50  0001 C CNN
+F 3 "~" H 1550 2050 50  0001 C CNN
+	1    1550 2050
+	-1   0    0    1   
+$EndComp
+Text Notes 1400 2000 0    50   ~ 10
++
+Text Notes 1400 2100 0    50   ~ 10
+-
+Text Notes 1150 1750 0    50   ~ 10
+9 V input\n
+$Comp
+L power:+9V #PWR0101
+U 1 1 5FC6600A
+P 1750 1950
+F 0 "#PWR0101" H 1750 1800 50  0001 C CNN
+F 1 "+9V" H 1765 2123 50  0000 C CNN
+F 2 "" H 1750 1950 50  0001 C CNN
+F 3 "" H 1750 1950 50  0001 C CNN
+	1    1750 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+9V #PWR0102
+U 1 1 5FC6639C
+P 2950 2550
+F 0 "#PWR0102" H 2950 2400 50  0001 C CNN
+F 1 "+9V" H 2965 2723 50  0000 C CNN
+F 2 "" H 2950 2550 50  0001 C CNN
+F 3 "" H 2950 2550 50  0001 C CNN
+	1    2950 2550
+	1    0    0    -1  
+$EndComp
+Connection ~ 2950 2550
+$Comp
+L power:GND #PWR0104
+U 1 1 5FC664D3
+P 1750 2050
+F 0 "#PWR0104" H 1750 1800 50  0001 C CNN
+F 1 "GND" H 1755 1877 50  0000 C CNN
+F 2 "" H 1750 2050 50  0001 C CNN
+F 3 "" H 1750 2050 50  0001 C CNN
+	1    1750 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5FC665CC
+P 2950 3350
+F 0 "#PWR0105" H 2950 3100 50  0001 C CNN
+F 1 "GND" H 2955 3177 50  0000 C CNN
+F 2 "" H 2950 3350 50  0001 C CNN
+F 3 "" H 2950 3350 50  0001 C CNN
+	1    2950 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5FC66601
+P 2250 3800
+F 0 "#PWR0106" H 2250 3550 50  0001 C CNN
+F 1 "GND" H 2255 3627 50  0000 C CNN
+F 2 "" H 2250 3800 50  0001 C CNN
+F 3 "" H 2250 3800 50  0001 C CNN
+	1    2250 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5FC6661A
+P 4700 3050
+F 0 "#PWR0107" H 4700 2800 50  0001 C CNN
+F 1 "GND" H 4705 2877 50  0000 C CNN
+F 2 "" H 4700 3050 50  0001 C CNN
+F 3 "" H 4700 3050 50  0001 C CNN
+	1    4700 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2150 3750 2000
+Wire Wire Line
+	3750 2000 1750 2000
+Wire Wire Line
+	1750 2000 1750 1950
+Connection ~ 1750 1950
+Wire Wire Line
+	2250 2750 2250 3450
+Wire Wire Line
+	3650 3450 2250 3450
+Connection ~ 2250 3450
+Wire Wire Line
+	2250 3450 2250 3500
+$EndSCHEMATC
